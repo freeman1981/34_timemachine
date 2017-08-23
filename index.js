@@ -1,10 +1,24 @@
 var TIMEOUT_IN_SECS = 5 * 60;
+var ALERT_INTERVAL = 30;
 var TEMPLATE = '<h1><span id="timer-minutes">00</span>:<span id="timer-seconds">00</span></h1>';
 
 // adds HTML tag to current page
 var timerContainer = document.createElement('div');
 timerContainer.setAttribute("style",
-    "height: 100px;"
+    "left: 10px;" +
+    "top: 10px;" +
+    "position: fixed;" +
+    "z-index: 10;" +
+    "opacity: 0.8;" +
+    "width: auto;" +
+    "height: auto;" +
+    "padding: 3px;" +
+    "margin: 3px;" +
+    "background-color: #777;" +
+    "color: orange;" +
+    "border: black;" +
+    "font-size: smaller;" +
+    "line-height: 1px;"
 );
 var bodyTag = document.body;
 bodyTag.insertBefore(timerContainer, bodyTag.firstChild);
