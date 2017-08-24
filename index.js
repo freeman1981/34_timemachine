@@ -8,7 +8,7 @@ timerContainer.setAttribute("style",
     "left: 10px;" +
     "top: 10px;" +
     "position: fixed;" +
-    "z-index: 10;" +
+    "z-index: 1000;" +
     "opacity: 0.8;" +
     "width: auto;" +
     "height: auto;" +
@@ -16,9 +16,11 @@ timerContainer.setAttribute("style",
     "margin: 3px;" +
     "background-color: #777;" +
     "color: orange;" +
-    "border: black;" +
+    "border: black solid 2px;" +
+    "border: black solid 2px;" +
     "font-size: smaller;" +
-    "line-height: 1px;"
+    "border-radius: 10px;" +
+    "line-height: 0;"
 );
 var bodyTag = document.body;
 bodyTag.insertBefore(timerContainer, bodyTag.firstChild);
@@ -42,6 +44,10 @@ function displayTimer(){
 
   var minutes = Math.floor(secsLeft / 60);
   var seconds = secsLeft - minutes * 60;
+
+  if (secsLeft === 0 && currentTimestamp % ALERT_INTERVAL === 0)  {
+        window.alert('Пора закругляться!')
+  }
 
   document.getElementById('timer-minutes').innerHTML = padZero(minutes);
   document.getElementById('timer-seconds').innerHTML = padZero(seconds)
