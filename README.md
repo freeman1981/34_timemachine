@@ -10,8 +10,8 @@ Open configuration of [cjs](https://chrome.google.com/webstore/detail/custom-jav
 You should add this link https://rawgit.com/freeman1981/34_timemachine/master/index.js.
 Don`t forget to press "enable cjs for this host" to enable custom JS.
 
-After that you will see timer with 5 min trash holder
-
+After that you will see a timer with a reverse report for 5 minutes. 
+When the time expires every 30 seconds, a window will pop up with a reminder that the time has expired.
 For faster development you can use JS code hosted on localhost. Simple web server can be used for that, run:
 
 ```bash
